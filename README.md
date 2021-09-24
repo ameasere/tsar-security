@@ -57,12 +57,12 @@ Optionally: QT Designer
 
 ### Installing
 
-Step 1: Install Python from <a href="https://python.org">here</a>.
-Step 2: Run the Python installer and make sure to tick "Add Python 3 to PATH" on the first screen.
-Step 3: Open up Command Prompt with Run or by searchbar.
-Step 4: Enter in `pip3 install pyside2 blurwindow pandas pyminizip ruamel.std.encryptedzip requests PyCryptodomex`.
-Step 5: If prompted, install C++ Build Tools as required by `pyminizip`.
-Step 6: Run Tsar by .exe or by main.py
+Step 1: Install Python from <a href="https://python.org">here</a>.  
+Step 2: Run the Python installer and make sure to tick "Add Python 3 to PATH" on the first screen.  
+Step 3: Open up Command Prompt with Run or by searchbar.  
+Step 4: Enter in `pip3 install pyside2 blurwindow pandas pyminizip ruamel.std.encryptedzip requests PyCryptodomex`.  
+Step 5: If prompted, install C++ Build Tools as required by `pyminizip`.  
+Step 6: Run Tsar by .exe or by main.py  
 
 Your final result should look like this:
 
@@ -105,6 +105,6 @@ A special thank you to all the testers you have helped make this project a succe
 
 ## Acknowledgements <a name = "acknowledgement"></a>
 
-- Anthon from Ruamel, original package developer for ruamelmod
-- Viibrant, for offering services for the repo front end and for cross platform tinkering
-- Wanderson, original GUI framework
+- Anthon from Ruamel, original package developer for ruamelmod  
+- Viibrant, for offering services for the repo front end and for cross platform tinkering  
+- Wanderson, original GUI framework  
