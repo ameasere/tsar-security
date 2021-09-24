@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://enigmapr0ject.live" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/RCd6ef2.jpg" alt="Project logo"></a>
+ <img width=627px height=372px src="https://i.imgur.com/RCd6ef2.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">tsar-security</h3>
