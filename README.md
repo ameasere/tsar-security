@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://imgur.com/a/QcBbjNT" alt="Project logo"></a>
+ <img width=200px height=200px src="https://i.imgur.com/RCd6ef2.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">tsar-security</h3>
