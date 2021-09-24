@@ -33,9 +33,9 @@ Tsar is meant to be a successor to Solitaire Security, a product developed by us
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
--First, install Python 3 (we use Python 3.9) and make sure it is added to PATH.
--Open CMD, enter in: `pip3 install pyside2 blurwindow pandas pyminizip ruamel.std.encryptedzip requests PyCryptodomex` and hit enter. For the first time, you will get the error that pyminizip needs Visual C++ Build Tools. Once these are installed (it does provide a link), then try running the above command again.
--Run the EXE or the main.py file
+-First, install Python 3 (we use Python 3.9) and make sure it is added to PATH.  
+-Open CMD, enter in: `pip3 install pyside2 blurwindow pandas pyminizip ruamel.std.encryptedzip requests PyCryptodomex` and hit enter. For the first time, you will get the error that pyminizip needs Visual C++ Build Tools. Once these are installed (it does provide a link), then try running the above command again.  
+-Run the EXE or the main.py file  
 
 You will need your API key found <a href="https://enigmapr0ject.live/tsar">here</a> from when you registered as a beta tester (once beta testing ends, these become defunct) and place it into the api.key file, or change the API key through the login screen of Tsar.
 
