@@ -4,3 +4,4 @@ BlurWindow==1.2.1
 pycryptodomex==3.10.1
 pyminizip==0.2.4
 PySide2==5.15.2
+ruamel.std.encryptedzip
