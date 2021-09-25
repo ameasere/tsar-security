@@ -6,8 +6,9 @@
 </p>
 
 ---
-
-<img align="center" width=627px height=372px src="https://i.imgur.com/qHJFXa3.png" alt="Tsar Login Screen">
+<p align="center">
+  <img width=627px height=372px src="https://i.imgur.com/qHJFXa3.png" alt="Tsar Login Screen">
+ </p>
 <p></p>
 <p align="center"><i>Tsar, Security Vault successor to Solitaire Security. </i>
 </p>
@@ -19,7 +20,7 @@
 - [About](#about)
 - [Setting up a Development Environment](#development)
 - - [Dependencies](#dependencies)
-- - [Testing](#testing)
+- - [Testing](#tests)
 - [Installation](#installation)
 - [Usage](#usage)
 - - [Warning](#warning)
