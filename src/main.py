@@ -7,7 +7,7 @@
 ################################################################################
 import pyminizip, zipfile, ruamelmod, ntpath, base64, sys, webbrowser, time, requests, os, json
 import pandas as pd
-from BlurWindow.blurWindow import blur
+from BlurWindow.blurWindow import GlobalBlur
 from Cryptodome.Cipher import AES
 from ruamelmod import delete_from_zip_file
 from PySide2 import QtCore, QtGui, QtWidgets
@@ -79,11 +79,11 @@ class AddFilesToArchive(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.importFiles.clicked.connect(self.importFiles)
         self.ui.addAllFiles.clicked.connect(self.addToArchive)
         self.ui.closeButton.clicked.connect(self.fade)
-        self.filestobeadded = []
+        self.filestobeadded = [] 
         self.filearray = []
         self.archiveName = archiveName
         self.archivePW = bytes(archivePW, encoding="utf-8")
@@ -155,7 +155,7 @@ class RemoveFilesFromArchive(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.closeButton.clicked.connect(self.fade)
         self.ui.removeAllFiles.clicked.connect(self.removeAllFiles)
         self.filestoberemoved = []
@@ -215,7 +215,7 @@ class RenameZIP(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.filePath = filePath
         self.ui.closeButton.clicked.connect(self.fade)
         self.ui.renameButton.clicked.connect(self.renameArchive)
@@ -252,7 +252,7 @@ class ExtractZipGUI(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.closeButton.clicked.connect(self.fade)
         self.ui.selectArchiveButton.clicked.connect(self.selectArchive)
         self.ui.extractArchiveButton.clicked.connect(self.extractAndDecrypt)
@@ -320,7 +320,7 @@ class EnterPassword(QMainWindow):
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         self.zipPath = zipPath
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.enterButton.clicked.connect(self.returnPassword)
         self.ui.archivePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.ui.closeButton.clicked.connect(self.fade)
@@ -366,7 +366,7 @@ class EnterPassword2(QMainWindow):
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         self.zipPath = zipPath
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.enterButton.clicked.connect(self.returnPassword)
         self.ui.archivePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.ui.closeButton.clicked.connect(self.fade)
@@ -413,7 +413,7 @@ class EnterPassword3(QMainWindow):
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         self.fileName = zipPath
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.enterButton.clicked.connect(self.returnPassword)
         self.ui.archivePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.ui.closeButton.clicked.connect(self.fade)
@@ -494,7 +494,7 @@ class EnterPassword4(QMainWindow):
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         self.zipPath = zipPath
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.enterButton.clicked.connect(self.returnPassword)
         self.ui.archivePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.ui.closeButton.clicked.connect(self.fade)
@@ -540,7 +540,7 @@ class Tsar(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.exitButton.clicked.connect(self.exitApp)
         self.user = user
         self.ui.keylabel.setText("*******************************")
@@ -641,7 +641,7 @@ class DisplayZipGUI(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.archivePassword = archivePW
         self.zipPath = zipPath
         self.ui.closeButton.clicked.connect(self.fade)
@@ -692,7 +692,7 @@ class ModifyZipGUI(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.closeButton.clicked.connect(self.fade)
         self.ui.selectArchiveButton.clicked.connect(self.selectArchive)
         self.ui.addFilesButton.clicked.connect(self.addFiles)
@@ -764,7 +764,7 @@ class CreateZipGUI(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.closeButton.clicked.connect(self.fade)
         self.ui.createZip.clicked.connect(self.createZip)
         self.ui.selectFolder.clicked.connect(self.chooseFolder)
@@ -855,7 +855,7 @@ class APIKeyWindow(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         with open("api.key", "r") as apifile:
             contents = apifile.read()
             apifile.close()
@@ -891,7 +891,7 @@ class MainWindow(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.passbox.setEchoMode(QtWidgets.QLineEdit.Password)
         self.ui.exitButton.clicked.connect(self.exitApp)
         self.ui.registerButton.clicked.connect(self.registerWindow)
@@ -953,7 +953,7 @@ class MainWindow2(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.exitButton.clicked.connect(self.fade)
         self.ui.github.clicked.connect(self.github)
         self.ui.registerButton.clicked.connect(self.register)
@@ -1002,7 +1002,7 @@ class InternetFailed(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.exitButton.clicked.connect(self.fade)
     def fade(self):
         for i in range(10):
@@ -1027,7 +1027,7 @@ class SignatureFailed(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         self.ui.exitButton.clicked.connect(self.exitApp)
         self.ui.updateButton.clicked.connect(self.update)
         self.ui.continueButton.clicked.connect(self.proceed)
@@ -1065,7 +1065,7 @@ class SplashScreen(QMainWindow):
         self.shadow.setColor(QColor(0, 0, 0, 60))
         self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
         hWnd = self.winId()
-        blur(hWnd)
+        GlobalBlur(hWnd)
         ## QTIMER ==> START
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.progress)
