@@ -97,7 +97,7 @@ You will need your API key found <a href="https://enigmapr0ject.live/tsar">here<
 ### Authors & Acknowledgements <a name = "authors"></a>
 
 - [@projectintel-anon](https://github.com/projectintel-anon) - Founder, Developer
-- [@Viibrant](https://github.com/Viibrant) - Linux Developer, Cross Platform Support and Major Contributor
+- [@Viibrant](https://github.com/UP2014372) - Linux Developer, Cross Platform Support and Major Contributor
 
 A special thank you to all the testers you have helped make this project a success.
 
