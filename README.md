@@ -67,8 +67,6 @@ Start off by installing the dependencies on your system via
 pip install -r requirements.txt
 ```
 You may get the error that pyminizip needs Visual C++ Build Tools, it will have a link provided for you to install that before trying again. 
-
-You will need your API key found <a href="https://enigmapr0ject.live/tsar">here</a> from when you registered as a beta tester. Place it into the api.key file, or change the API key through the login screen of Tsar.
   
 ### 🔧 Running the tests <a name = "tests"></a>
 
