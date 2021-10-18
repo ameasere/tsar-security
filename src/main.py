@@ -15,7 +15,6 @@ from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTi
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 from PySide2.QtUiTools import QUiLoader
-## ==> SPLASH SCREEN
 from ui_splash_screen import Ui_SplashScreen
 from internetfailed import Ui_FailedScreen
 from signaturefailed import Ui_FailedScreen2
@@ -30,7 +29,7 @@ from removeFiles import Ui_removeFilesGUI
 from displayFiles import Ui_displayArchiveGUI
 from renameArchive import Ui_renameArchiveGUI
 from extractArchive import Ui_extractArchiveGUI
-from apikey import Ui_apiwindow
+## ==> SPLASH SCREEN
 ## ==> GLOBALS
 counter = 0
 exceptionArray = []
@@ -57,11 +56,6 @@ def breadthFirstFileScan( root ) :
         # from the current itter.
         dirs = nextDirs
 #######################################
-def getAPIKey():
-    with open("api.key", "r") as apifile:
-        api_key = apifile.read().rstrip()
-        apifile.close()
-    return api_key
 # UNIVERSAL
 class AddFilesToArchive(QMainWindow):
     def __init__(self, archiveName, archivePW, key, iv):
@@ -83,7 +77,7 @@ class AddFilesToArchive(QMainWindow):
         self.ui.importFiles.clicked.connect(self.importFiles)
         self.ui.addAllFiles.clicked.connect(self.addToArchive)
         self.ui.closeButton.clicked.connect(self.fade)
-        self.filestobeadded = [] 
+        self.filestobeadded = []
         self.filearray = []
         self.archiveName = archiveName
         self.archivePW = bytes(archivePW, encoding="utf-8")
@@ -601,8 +595,7 @@ class Tsar(QMainWindow):
         else:
             return 0
     def getKeys(self, passwd):
-        api_key = getAPIKey()
-        jsonString = {"key": api_key, "Email": self.user, "Password": passwd}  # Create JSON object
+        jsonString = {"Email": self.user, "Password": passwd}  # Create JSON object
         url = "https://enigmapr0ject.live/api/tsar/queryKeys.php/"  # URL
         headers = {}  # Blank headers
         r = requests.post(url, data=jsonString, headers=headers)  # set this to True when you set up
@@ -839,41 +832,6 @@ class CreateZipGUI(QMainWindow):
             self.setWindowOpacity(1 - i)
             time.sleep(0.05)
         self.close()
-# KEY WINDOW
-class APIKeyWindow(QMainWindow):
-    def __init__(self):
-        QMainWindow.__init__(self)
-        self.ui = Ui_apiwindow()
-        self.ui.setupUi(self)
-        # MAIN WINDOW LABEL
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.shadow = QGraphicsDropShadowEffect(self)
-        self.shadow.setBlurRadius(20)
-        self.shadow.setXOffset(0)
-        self.shadow.setYOffset(0)
-        self.shadow.setColor(QColor(0, 0, 0, 60))
-        self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
-        hWnd = self.winId()
-        GlobalBlur(hWnd)
-        with open("api.key", "r") as apifile:
-            contents = apifile.read()
-            apifile.close()
-        self.ui.apibox.setText(contents)
-        self.ui.writekey.clicked.connect(self.writekey)
-        self.ui.exitButton.clicked.connect(self.fade)
-    def writekey(self):
-        with open("api.key", "w+") as apifile:
-            apifile.write(self.ui.apibox.text())
-            apifile.close()
-        self.ui.apibox.setText(self.ui.apibox.text())
-        self.ui.response.setText("Key set!")
-    def fade(self):
-        for i in range(10):
-            i = i / 10
-            self.setWindowOpacity(1 - i)
-            time.sleep(0.05)
-        self.close()
 # LOGIN WINDOW
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -897,12 +855,11 @@ class MainWindow(QMainWindow):
         self.ui.registerButton.clicked.connect(self.registerWindow)
         self.ui.github.clicked.connect(self.github)
         self.ui.login.clicked.connect(self.loginUser)
-        self.ui.manageKey.clicked.connect(self.manageKey)
-    def manageKey(self):
-        self.keywindow = APIKeyWindow()
-        self.keywindow.show()
+        self.ui.changePW.clicked.connect(self.changePassword)
     def github(self):
         webbrowser.get().open("https://github.com/projectintel-anon/tsar-security")
+    def changePassword(self):
+        webbrowser.get().open("https://enigmapr0ject.live/api/tsar/chngPw.php")
     def registerWindow(self):
         for i in range(10):
             i = i / 10
@@ -917,11 +874,12 @@ class MainWindow(QMainWindow):
             self.setWindowOpacity(1 - i)
             time.sleep(0.05)
         self.close()
+        self.main = MainWindow2()
+        self.main.show()
     def loginUser(self):
         emailaddress = self.ui.userbox.text()
         userpass = self.ui.passbox.text()
-        api_key = getAPIKey()
-        jsonString = {"key": api_key, "Email": emailaddress, "Password": userpass}  # Create JSON object
+        jsonString = {"Email": emailaddress, "Password": userpass}  # Create JSON object
         url = "https://enigmapr0ject.live/api/tsar/login.php/"  # URL
         headers = {}  # Blank headers
         r = requests.post(url, data=jsonString, headers=headers)  # set this to True when you set up
@@ -976,8 +934,7 @@ class MainWindow2(QMainWindow):
         self.main.show()
     def register(self):
         emailaddress = self.ui.emailbox.text()
-        api_key = getAPIKey()
-        jsonString = {"key": api_key, "Email": emailaddress}  # Create JSON object
+        jsonString = {"Email": emailaddress}  # Create JSON object
         url = "https://enigmapr0ject.live/api/tsar/register.php/"  # URL
         headers = {}  # Blank headers
         r = requests.post(url, data=jsonString, headers=headers)  # set this to True when you set up
@@ -1080,6 +1037,8 @@ class SplashScreen(QMainWindow):
         # Change Texts
         QtCore.QTimer.singleShot(1500, lambda: self.ui.label_description.setText("<strong>LOCKING</strong> DATABASES"))
         QtCore.QTimer.singleShot(3000, lambda: self.ui.label_description.setText("<strong>SALTING</strong> HASHES"))
+        import hashlib
+        signature = hashlib.md5(open('C:\\Users\\light\\OneDrive\\Desktop\\Work\\Tsar\\tsar.exe','rb').read()).hexdigest()
         # PREREQUISITE CHECKS
         try:
             internetCheck = requests.get("https://enigmapr0ject.live/files/donate.html").content.decode("utf-8")
@@ -1087,12 +1046,11 @@ class SplashScreen(QMainWindow):
             self.internet = 0
         if internetCheck is not None:
             self.internet = 1
-        signatureCheck = requests.post("https://enigmapr0ject.live/api/tsar/signature.php", data={"hash": "204907209B1ED469D2A01A9C356D52D6B3BD7061"}).content.decode("utf-8")
+        signatureCheck = requests.post("https://enigmapr0ject.live/api/tsar/signature.php", data={"hash": signature}).content.decode("utf-8")
         if signatureCheck != "200":
             self.signature = 0
         else:
             self.signature = 1
-
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()
@@ -1129,9 +1087,6 @@ class SplashScreen(QMainWindow):
 
         # INCREASE COUNTER
         counter += 1
-
-
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
