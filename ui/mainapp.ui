@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Tsar Beta 1</string>
+   <string>Tsar</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -129,7 +129,7 @@ background-color: rgba(255, 255, 255, 0); </string>
 background-color: rgba(255, 255, 255, 0); </string>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline;&quot;&gt;1.0:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-Added 2 Factor Authentication&lt;br/&gt;-Password resets use 2FA&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-Brand new GUI&lt;br/&gt;-Windows native support&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline;&quot;&gt;To Come:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-UNIX support&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-Additional functionality&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline;&quot;&gt;1.0.1:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-Draggable windows&lt;br/&gt;-KDE blur Support&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline;&quot;&gt;To Come:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-UNIX universal blur&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;-Additional functionality&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -395,38 +395,12 @@ background-color: rgba(255, 255, 255, 0); </string>
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_title_2">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>-10</y>
-         <width>91</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Consolas</family>
-         <pointsize>40</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(3, 198, 252);
-background-color: rgba(255, 255, 255, 0); </string>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;BETA 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="manageKey">
+      <widget class="QPushButton" name="changePW">
        <property name="geometry">
         <rect>
          <x>470</x>
          <y>350</y>
-         <width>100</width>
+         <width>101</width>
          <height>23</height>
         </rect>
        </property>
@@ -440,7 +414,7 @@ background-color: rgba(255, 255, 255, 0); </string>
 background-color: rgba(239, 0, 156, 255);</string>
        </property>
        <property name="text">
-        <string>Manage API Key</string>
+        <string>Change Password</string>
        </property>
       </widget>
      </widget>
