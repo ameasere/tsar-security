@@ -19,6 +19,9 @@ class Ui_main2(object):
         if not main2.objectName():
             main2.setObjectName(u"main2")
         main2.resize(680, 400)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        main2.setWindowIcon(icon)
         self.centralwidget = QWidget(main2)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -109,13 +112,13 @@ class Ui_main2(object):
         self.changelog_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.loginButton = QPushButton(self.dropShadowFrame)
         self.loginButton.setObjectName(u"loginButton")
-        self.loginButton.setGeometry(QRect(410, 300, 75, 23))
+        self.loginButton.setGeometry(QRect(490, 300, 75, 23))
         self.loginButton.setFont(font2)
         self.loginButton.setStyleSheet(u"color: rgba(255, 255, 255, 255);\n"
 "background-color: rgba(239, 0, 156, 255);")
         self.exitButton = QPushButton(self.dropShadowFrame)
         self.exitButton.setObjectName(u"exitButton")
-        self.exitButton.setGeometry(QRect(500, 300, 75, 23))
+        self.exitButton.setGeometry(QRect(580, 300, 75, 23))
         self.exitButton.setFont(font2)
         self.exitButton.setStyleSheet(u"color: rgba(255, 255, 255, 255);\n"
 "background-color: rgba(239, 0, 156, 255);")
@@ -137,10 +140,10 @@ class Ui_main2(object):
     # setupUi
 
     def retranslateUi(self, main2):
-        main2.setWindowTitle(QCoreApplication.translate("main2", u"SoarGuide", None))
+        main2.setWindowTitle(QCoreApplication.translate("main2", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("main2", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("main2", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
-        self.changelog.setText(QCoreApplication.translate("main2", u"<html><head/><body><p><span style=\" font-size:10pt; text-decoration: underline;\">1.0:</span></p><p><span style=\" font-size:10pt;\">-Added 2 Factor Authentication<br/>-Password resets use 2FA</span></p><p><span style=\" font-size:10pt;\">-Brand new GUI<br/>-Windows native support</span></p><p><span style=\" font-size:10pt; text-decoration: underline;\">To Come:</span></p><p><span style=\" font-size:10pt;\">-UNIX support</span></p><p><span style=\" font-size:10pt;\">-Additional functionality</span></p></body></html>", None))
+        self.changelog.setText(QCoreApplication.translate("main2", u"<html><head/><body><p><span style=\" font-size:10pt; text-decoration: underline;\">1.0.1:</span></p><p><span style=\" font-size:10pt;\">-Draggable windows<br/>-KDE blur Support</span></p><p><span style=\" font-size:10pt; text-decoration: underline;\">To Come:</span></p><p><span style=\" font-size:10pt;\">-UNIX universal blur</span></p><p><span style=\" font-size:10pt;\">-Additional functionality</span></p><p><br/></p></body></html>", None))
         self.changelog_2.setText(QCoreApplication.translate("main2", u"<html><head/><body><p><span style=\" font-size:10pt;\">To keep up to date with</span></p><p><span style=\" font-size:10pt;\">all latest news and features,</span></p><p><span style=\" font-size:10pt;\">head to our GitHub!</span></p></body></html>", None))
         self.github.setText(QCoreApplication.translate("main2", u"GitHub", None))
         self.label_credits_2.setText(QCoreApplication.translate("main2", u"<html><head/><body><p>Email</p></body></html>", None))

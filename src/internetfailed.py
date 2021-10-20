@@ -18,6 +18,9 @@ class Ui_FailedScreen(object):
         if not FailedScreen.objectName():
             FailedScreen.setObjectName(u"FailedScreen")
         FailedScreen.resize(680, 400)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        FailedScreen.setWindowIcon(icon)
         self.centralwidget = QWidget(FailedScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -77,7 +80,7 @@ class Ui_FailedScreen(object):
     # setupUi
 
     def retranslateUi(self, FailedScreen):
-        FailedScreen.setWindowTitle(QCoreApplication.translate("FailedScreen", u"SoarGuide", None))
+        FailedScreen.setWindowTitle(QCoreApplication.translate("FailedScreen", u"Tsar", None))
         self.title.setText(QCoreApplication.translate("FailedScreen", u"<html><head/><body><p><span style=\" font-weight:600;\">Internet Failed</span></p></body></html>", None))
         self.subtitle.setText(QCoreApplication.translate("FailedScreen", u"<html><head/><body><p>You are seeing this message because Tsar failed to detect</p><p>a viable internet connection to interface with the central</p><p>server. As such, Tsar cannot function. Please re-open Tsar</p><p>when your internet connection is available.</p></body></html>", None))
         self.credit.setText(QCoreApplication.translate("FailedScreen", u"<strong>Created</strong>: enigmapr0ject", None))

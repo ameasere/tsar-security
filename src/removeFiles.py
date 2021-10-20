@@ -19,6 +19,9 @@ class Ui_removeFilesGUI(object):
         if not removeFilesGUI.objectName():
             removeFilesGUI.setObjectName(u"removeFilesGUI")
         removeFilesGUI.resize(590, 369)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        removeFilesGUI.setWindowIcon(icon)
         self.centralwidget = QWidget(removeFilesGUI)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -115,7 +118,7 @@ class Ui_removeFilesGUI(object):
     # setupUi
 
     def retranslateUi(self, removeFilesGUI):
-        removeFilesGUI.setWindowTitle(QCoreApplication.translate("removeFilesGUI", u"SoarGuide", None))
+        removeFilesGUI.setWindowTitle(QCoreApplication.translate("removeFilesGUI", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("removeFilesGUI", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("removeFilesGUI", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
         self.label_credits_3.setText(QCoreApplication.translate("removeFilesGUI", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; font-style:italic;\">Remove Files</span></p></body></html>", None))

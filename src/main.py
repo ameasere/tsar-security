@@ -63,7 +63,7 @@ class AddFilesToArchive(QMainWindow):
         self.ui = Ui_addFilesGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -139,7 +139,7 @@ class RemoveFilesFromArchive(QMainWindow):
         self.ui = Ui_removeFilesGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -199,7 +199,7 @@ class RenameZIP(QMainWindow):
         self.ui = Ui_renameArchiveGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -236,7 +236,7 @@ class ExtractZipGUI(QMainWindow):
         self.ui = Ui_extractArchiveGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -303,7 +303,7 @@ class EnterPassword(QMainWindow):
         self.ui = Ui_enterpassword()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -349,7 +349,7 @@ class EnterPassword2(QMainWindow):
         self.ui = Ui_enterpassword()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -396,7 +396,7 @@ class EnterPassword3(QMainWindow):
         self.ui = Ui_enterpassword()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -477,7 +477,7 @@ class EnterPassword4(QMainWindow):
         self.ui = Ui_enterpassword()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -524,7 +524,7 @@ class Tsar(QMainWindow):
         self.ui = Ui_Tsar()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -624,7 +624,7 @@ class DisplayZipGUI(QMainWindow):
         self.ui = Ui_displayArchiveGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -675,7 +675,7 @@ class ModifyZipGUI(QMainWindow):
         self.ui = Ui_modifyArchiveGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -747,7 +747,7 @@ class CreateZipGUI(QMainWindow):
         self.ui = Ui_createArchiveGUI()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -839,7 +839,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_main()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -901,7 +901,7 @@ class MainWindow2(QMainWindow):
         self.ui = Ui_main2()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -949,7 +949,7 @@ class InternetFailed(QMainWindow):
         self.ui = Ui_FailedScreen()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -974,7 +974,7 @@ class SignatureFailed(QMainWindow):
         self.ui = Ui_FailedScreen2()
         self.ui.setupUi(self)
         ## REMOVE TITLE BAR
-        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         ## DROP SHADOW EFFECT
         self.shadow = QGraphicsDropShadowEffect(self)
@@ -1038,7 +1038,7 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(1500, lambda: self.ui.label_description.setText("<strong>LOCKING</strong> DATABASES"))
         QtCore.QTimer.singleShot(3000, lambda: self.ui.label_description.setText("<strong>SALTING</strong> HASHES"))
         import hashlib
-        signature = hashlib.md5(open('C:\\Users\\light\\OneDrive\\Desktop\\Work\\Tsar\\tsar.exe','rb').read()).hexdigest()
+        signature = hashlib.md5(open(os.getcwd() + '/tsar.exe','rb').read()).hexdigest()
         # PREREQUISITE CHECKS
         try:
             internetCheck = requests.get("https://enigmapr0ject.live/files/donate.html").content.decode("utf-8")

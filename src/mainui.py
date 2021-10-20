@@ -139,18 +139,11 @@ class Ui_main(object):
         self.response.setStyleSheet(u"color: rgba(239, 0, 156, 255);\n"
 "background-color: rgba(255, 255, 255, 0); ")
         self.response.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-        self.label_title_2 = QLabel(self.dropShadowFrame)
-        self.label_title_2.setObjectName(u"label_title_2")
-        self.label_title_2.setGeometry(QRect(70, -10, 91, 61))
-        self.label_title_2.setFont(font)
-        self.label_title_2.setStyleSheet(u"color: rgb(3, 198, 252);\n"
-"background-color: rgba(255, 255, 255, 0); ")
-        self.label_title_2.setAlignment(Qt.AlignCenter)
-        self.manageKey = QPushButton(self.dropShadowFrame)
-        self.manageKey.setObjectName(u"manageKey")
-        self.manageKey.setGeometry(QRect(470, 350, 100, 23))
-        self.manageKey.setFont(font2)
-        self.manageKey.setStyleSheet(u"color: rgba(255, 255, 255, 255);\n"
+        self.changePW = QPushButton(self.dropShadowFrame)
+        self.changePW.setObjectName(u"changePW")
+        self.changePW.setGeometry(QRect(470, 350, 101, 23))
+        self.changePW.setFont(font2)
+        self.changePW.setStyleSheet(u"color: rgba(255, 255, 255, 255);\n"
 "background-color: rgba(239, 0, 156, 255);")
 
         self.verticalLayout.addWidget(self.dropShadowFrame)
@@ -163,10 +156,10 @@ class Ui_main(object):
     # setupUi
 
     def retranslateUi(self, main):
-        main.setWindowTitle(QCoreApplication.translate("main", u"Tsar Beta 1", None))
+        main.setWindowTitle(QCoreApplication.translate("main", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("main", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("main", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
-        self.changelog.setText(QCoreApplication.translate("main", u"<html><head/><body><p><span style=\" font-size:10pt; text-decoration: underline;\">1.0:</span></p><p><span style=\" font-size:10pt;\">-Added 2 Factor Authentication<br/>-Password resets use 2FA</span></p><p><span style=\" font-size:10pt;\">-Brand new GUI<br/>-Windows native support</span></p><p><span style=\" font-size:10pt; text-decoration: underline;\">To Come:</span></p><p><span style=\" font-size:10pt;\">-UNIX support</span></p><p><span style=\" font-size:10pt;\">-Additional functionality</span></p></body></html>", None))
+        self.changelog.setText(QCoreApplication.translate("main", u"<html><head/><body><p><span style=\" font-size:10pt; text-decoration: underline;\">1.0.1:</span></p><p><span style=\" font-size:10pt;\">-Draggable windows<br/>-KDE blur Support</span></p><p><span style=\" font-size:10pt; text-decoration: underline;\">To Come:</span></p><p><span style=\" font-size:10pt;\">-UNIX universal blur</span></p><p><span style=\" font-size:10pt;\">-Additional functionality</span></p><p><br/></p></body></html>", None))
         self.changelog_2.setText(QCoreApplication.translate("main", u"<html><head/><body><p><span style=\" font-size:10pt;\">To keep up to date with</span></p><p><span style=\" font-size:10pt;\">all latest news and features,</span></p><p><span style=\" font-size:10pt;\">head to our GitHub!</span></p></body></html>", None))
         self.github.setText(QCoreApplication.translate("main", u"GitHub", None))
         self.label_credits_2.setText(QCoreApplication.translate("main", u"<html><head/><body><p>Username</p></body></html>", None))
@@ -179,7 +172,6 @@ class Ui_main(object):
         self.registerButton.setText(QCoreApplication.translate("main", u"Register", None))
         self.exitButton.setText(QCoreApplication.translate("main", u"Exit", None))
         self.response.setText(QCoreApplication.translate("main", u"<html><head/><body><p><br/></p></body></html>", None))
-        self.label_title_2.setText(QCoreApplication.translate("main", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">BETA 1</span></p></body></html>", None))
-        self.manageKey.setText(QCoreApplication.translate("main", u"Manage API Key", None))
+        self.changePW.setText(QCoreApplication.translate("main", u"Change Password", None))
     # retranslateUi
 

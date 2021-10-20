@@ -18,6 +18,9 @@ class Ui_SplashScreen(object):
         if not SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
         SplashScreen.resize(680, 400)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        SplashScreen.setWindowIcon(icon)
         self.centralwidget = QWidget(SplashScreen)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -98,7 +101,7 @@ class Ui_SplashScreen(object):
     # setupUi
 
     def retranslateUi(self, SplashScreen):
-        SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"SoarGuide", None))
+        SplashScreen.setWindowTitle(QCoreApplication.translate("SplashScreen", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p><span style=\" font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_description.setText(QCoreApplication.translate("SplashScreen", u"<html><head/><body><p>Portable Vault</p></body></html>", None))
         self.label_loading.setText(QCoreApplication.translate("SplashScreen", u"loading...", None))

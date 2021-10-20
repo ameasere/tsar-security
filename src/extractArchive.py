@@ -19,6 +19,9 @@ class Ui_extractArchiveGUI(object):
         if not extractArchiveGUI.objectName():
             extractArchiveGUI.setObjectName(u"extractArchiveGUI")
         extractArchiveGUI.resize(590, 219)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        extractArchiveGUI.setWindowIcon(icon)
         self.centralwidget = QWidget(extractArchiveGUI)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -104,7 +107,7 @@ class Ui_extractArchiveGUI(object):
     # setupUi
 
     def retranslateUi(self, extractArchiveGUI):
-        extractArchiveGUI.setWindowTitle(QCoreApplication.translate("extractArchiveGUI", u"SoarGuide", None))
+        extractArchiveGUI.setWindowTitle(QCoreApplication.translate("extractArchiveGUI", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("extractArchiveGUI", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("extractArchiveGUI", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
         self.label_credits_3.setText(QCoreApplication.translate("extractArchiveGUI", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; font-style:italic;\">Extract Archive</span></p></body></html>", None))

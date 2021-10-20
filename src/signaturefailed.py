@@ -18,6 +18,9 @@ class Ui_FailedScreen2(object):
         if not FailedScreen2.objectName():
             FailedScreen2.setObjectName(u"FailedScreen2")
         FailedScreen2.resize(680, 371)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        FailedScreen2.setWindowIcon(icon)
         self.centralwidget = QWidget(FailedScreen2)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -87,7 +90,7 @@ class Ui_FailedScreen2(object):
     # setupUi
 
     def retranslateUi(self, FailedScreen2):
-        FailedScreen2.setWindowTitle(QCoreApplication.translate("FailedScreen2", u"SoarGuide", None))
+        FailedScreen2.setWindowTitle(QCoreApplication.translate("FailedScreen2", u"Tsar", None))
         self.title.setText(QCoreApplication.translate("FailedScreen2", u"<html><head/><body><p><span style=\" font-weight:600;\">Signature Failed</span></p></body></html>", None))
         self.subtitle.setText(QCoreApplication.translate("FailedScreen2", u"<html><head/><body><p>You are currently running an outdated version of Tsar. </p><p>This means you are vulnerable to bugs, security flaws and other open holes </p><p>that have been plugged in recent updates. Tsar will continue to function, </p><p>however you will not be able to access new features and patches </p><p>until you update.</p></body></html>", None))
         self.credit.setText(QCoreApplication.translate("FailedScreen2", u"<strong>Created</strong>: enigmapr0ject", None))

@@ -19,6 +19,10 @@ class Ui_Tsar(object):
         if not Tsar.objectName():
             Tsar.setObjectName(u"Tsar")
         Tsar.resize(1075, 599)
+        Tsar.setAcceptDrops(False)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        Tsar.setWindowIcon(icon)
         self.centralwidget = QWidget(Tsar)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -115,9 +119,13 @@ class Ui_Tsar(object):
         self.ivreveal = QCheckBox(self.dropShadowFrame)
         self.ivreveal.setObjectName(u"ivreveal")
         self.ivreveal.setGeometry(QRect(940, 450, 70, 17))
+        self.ivreveal.setStyleSheet(u"color: rgb(3, 198, 252);\n"
+"background-color: rgba(255, 255, 255, 0); ")
         self.keyreveal = QCheckBox(self.dropShadowFrame)
         self.keyreveal.setObjectName(u"keyreveal")
         self.keyreveal.setGeometry(QRect(850, 450, 81, 17))
+        self.keyreveal.setStyleSheet(u"color: rgb(3, 198, 252);\n"
+"background-color: rgba(255, 255, 255, 0); ")
         self.label_credits_6 = QLabel(self.dropShadowFrame)
         self.label_credits_6.setObjectName(u"label_credits_6")
         self.label_credits_6.setGeometry(QRect(860, 230, 141, 21))
@@ -192,7 +200,7 @@ class Ui_Tsar(object):
     # setupUi
 
     def retranslateUi(self, Tsar):
-        Tsar.setWindowTitle(QCoreApplication.translate("Tsar", u"SoarGuide", None))
+        Tsar.setWindowTitle(QCoreApplication.translate("Tsar", u"Tsar ", None))
         self.label_title.setText(QCoreApplication.translate("Tsar", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("Tsar", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
         self.label_credits_3.setText(QCoreApplication.translate("Tsar", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; font-style:italic;\">Dashboard</span></p></body></html>", None))

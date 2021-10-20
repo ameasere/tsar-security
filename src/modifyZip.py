@@ -19,6 +19,9 @@ class Ui_modifyArchiveGUI(object):
         if not modifyArchiveGUI.objectName():
             modifyArchiveGUI.setObjectName(u"modifyArchiveGUI")
         modifyArchiveGUI.resize(590, 354)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        modifyArchiveGUI.setWindowIcon(icon)
         self.centralwidget = QWidget(modifyArchiveGUI)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -122,7 +125,7 @@ class Ui_modifyArchiveGUI(object):
     # setupUi
 
     def retranslateUi(self, modifyArchiveGUI):
-        modifyArchiveGUI.setWindowTitle(QCoreApplication.translate("modifyArchiveGUI", u"SoarGuide", None))
+        modifyArchiveGUI.setWindowTitle(QCoreApplication.translate("modifyArchiveGUI", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("modifyArchiveGUI", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("modifyArchiveGUI", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
         self.label_credits_3.setText(QCoreApplication.translate("modifyArchiveGUI", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; font-style:italic;\">Modify Archive</span></p></body></html>", None))

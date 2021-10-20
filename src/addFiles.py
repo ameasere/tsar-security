@@ -19,6 +19,9 @@ class Ui_addFilesGUI(object):
         if not addFilesGUI.objectName():
             addFilesGUI.setObjectName(u"addFilesGUI")
         addFilesGUI.resize(590, 168)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        addFilesGUI.setWindowIcon(icon)
         self.centralwidget = QWidget(addFilesGUI)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -105,7 +108,7 @@ class Ui_addFilesGUI(object):
     # setupUi
 
     def retranslateUi(self, addFilesGUI):
-        addFilesGUI.setWindowTitle(QCoreApplication.translate("addFilesGUI", u"SoarGuide", None))
+        addFilesGUI.setWindowTitle(QCoreApplication.translate("addFilesGUI", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("addFilesGUI", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("addFilesGUI", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
         self.label_credits_3.setText(QCoreApplication.translate("addFilesGUI", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; font-style:italic;\">Add Files</span></p></body></html>", None))

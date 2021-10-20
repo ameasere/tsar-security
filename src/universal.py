@@ -19,6 +19,9 @@ class Ui_enterpassword(object):
         if not enterpassword.objectName():
             enterpassword.setObjectName(u"enterpassword")
         enterpassword.resize(590, 197)
+        icon = QIcon()
+        icon.addFile(u"iconfile.ico", QSize(), QIcon.Normal, QIcon.Off)
+        enterpassword.setWindowIcon(icon)
         self.centralwidget = QWidget(enterpassword)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -101,7 +104,7 @@ class Ui_enterpassword(object):
     # setupUi
 
     def retranslateUi(self, enterpassword):
-        enterpassword.setWindowTitle(QCoreApplication.translate("enterpassword", u"SoarGuide", None))
+        enterpassword.setWindowTitle(QCoreApplication.translate("enterpassword", u"Tsar", None))
         self.label_title.setText(QCoreApplication.translate("enterpassword", u"<html><head/><body><p><span style=\" font-size:18pt; font-weight:600;\">Tsar</span></p></body></html>", None))
         self.label_credits.setText(QCoreApplication.translate("enterpassword", u"<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Created</span><span style=\" font-size:12pt;\">: enigmapr0ject</span></p></body></html>", None))
         self.label_credits_3.setText(QCoreApplication.translate("enterpassword", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:600; font-style:italic;\">Input Password</span></p></body></html>", None))
