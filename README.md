@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://enigmapr0ject.live" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/p3tnuMY.png" alt="Project logo"></a>
+ <img width=200px height=200px src="https://i.imgur.com/RCd6ef2.jpg" alt="Project logo"></a>
  <h2 align="center"><b>tsar-security</b></h3>
 </p>
 </p>
 
 <p align="center">
-  <img width=627px height=372px src="https://i.imgur.com/cZjEMWR.png" alt="Tsar Login Screen">
+  <img width=627px height=372px src="https://i.imgur.com/qHJFXa3.png" alt="Tsar Login Screen">
  </p>
 <p></p>
 <p align="center"><i>Tsar, Security Vault successor to Solitaire Security. </i>
