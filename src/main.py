@@ -596,7 +596,7 @@ class Tsar(QMainWindow):
             return 0
     def getKeys(self, passwd):
         jsonString = {"Email": self.user, "Password": passwd}  # Create JSON object
-        url = "https://enigmapr0ject.live/api/tsar/queryKeys.php/"  # URL
+        url = "https://api.ameasere.com/tsar/queryKeys.php/"  # URL
         headers = {}  # Blank headers
         r = requests.post(url, data=jsonString, headers=headers)  # set this to True when you set up
         # a valid SSL, this part relies on SSL/TLS encryption.
@@ -859,7 +859,7 @@ class MainWindow(QMainWindow):
     def github(self):
         webbrowser.get().open("https://github.com/projectintel-anon/tsar-security")
     def changePassword(self):
-        webbrowser.get().open("https://enigmapr0ject.live/api/tsar/chngPw.php")
+        webbrowser.get().open("https://api.ameasere.com/tsar/chngPw.php")
     def registerWindow(self):
         for i in range(10):
             i = i / 10
@@ -880,7 +880,7 @@ class MainWindow(QMainWindow):
         emailaddress = self.ui.userbox.text()
         userpass = self.ui.passbox.text()
         jsonString = {"Email": emailaddress, "Password": userpass}  # Create JSON object
-        url = "https://enigmapr0ject.live/api/tsar/login.php/"  # URL
+        url = "https://api.ameasere.com/tsar/login.php/"  # URL
         headers = {}  # Blank headers
         r = requests.post(url, data=jsonString, headers=headers)  # set this to True when you set up
         # a valid SSL, this part relies on SSL/TLS encryption.
@@ -935,7 +935,7 @@ class MainWindow2(QMainWindow):
     def register(self):
         emailaddress = self.ui.emailbox.text()
         jsonString = {"Email": emailaddress}  # Create JSON object
-        url = "https://enigmapr0ject.live/api/tsar/register.php/"  # URL
+        url = "https://api.ameasere.com/tsar/register.php/"  # URL
         headers = {}  # Blank headers
         r = requests.post(url, data=jsonString, headers=headers)  # set this to True when you set up
         # a valid SSL, this part relies on SSL/TLS encryption.
@@ -997,7 +997,7 @@ class SignatureFailed(QMainWindow):
     def exitApp(self):
         sys.exit(app.exec_())
     def update(self):
-        webbrowser.get().open("https://enigmapr0ject.live/#projects")
+        webbrowser.get().open("https://ameasere.com/#projects")
     def proceed(self):
         self.fade()
         self.main = MainWindow()
@@ -1041,12 +1041,12 @@ class SplashScreen(QMainWindow):
         signature = hashlib.md5(open(os.getcwd() + '/tsar.exe','rb').read()).hexdigest()
         # PREREQUISITE CHECKS
         try:
-            internetCheck = requests.get("https://enigmapr0ject.live/files/donate.html").content.decode("utf-8")
+            internetCheck = requests.get("https://ameasere.com/files/donate.html").content.decode("utf-8")
         except Exception as e:
             self.internet = 0
         if internetCheck is not None:
             self.internet = 1
-        signatureCheck = requests.post("https://enigmapr0ject.live/api/tsar/signature.php", data={"hash": signature}).content.decode("utf-8")
+        signatureCheck = requests.post("https://api.ameasere.com/tsar/signature.php", data={"hash": signature}).content.decode("utf-8")
         if signatureCheck != "200":
             self.signature = 0
         else:
